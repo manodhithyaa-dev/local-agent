@@ -11,3 +11,32 @@ qwen3:8b                  500a1f067a9f    05.2 GB
 llama3.2-vision:latest    6f2f9757ae97    07.8 GB
 
 """
+
+config = {
+    # Core Conversation
+    "chat": "ollama/qwen3:8b",
+    "logical": "ollama/deepseek-r1:7b",
+    "planner": "ollama/qwen3:30b",
+
+    # Coding
+    "quick_coding": "ollama/qwen2.5-coder:7b",
+    "deep_coding": "ollama/qwen3-coder:latest",
+    "verifier": "ollama/qwen2.5-coder:7b",
+
+    # Vision
+    "vision": "ollama/qwen2.5vl:7b",
+
+    # Image Generation Router
+    "image": {
+        "general": "sdxl",
+        "realistic": "juggernaut-xl",
+        "photorealistic": "realvisxl",
+        "anime": "animagine-xl",
+        "illustration": "dreamshaper-xl",
+        "concept_art": "juggernaut-xl",
+        "pixel_art": "sdxl",
+        "logo": "sdxl",
+        "ui_design": "sdxl",
+        "product_render": "juggernaut-xl"
+    }
+}
